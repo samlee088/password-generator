@@ -16,7 +16,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function writePassword() {
+function generatePassword() {
 
   var characterCount = ((window.prompt("Length of Password? 8 - Characters Min, 128 characters max"))*1);
 
@@ -110,7 +110,7 @@ let final = '';
   console.log(characterCount);
   console.log(i);
   console.log(final);
-
+return final;
 }
 
 
