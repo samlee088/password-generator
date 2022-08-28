@@ -2,8 +2,6 @@
 var generateBtn = document.querySelector("#generate");
 
 
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -18,25 +16,26 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
 
+  /* These are the prompts to get the array to select the charactesr from */
+
   var characterCount = ((window.prompt("Length of Password? 8 - Characters Min, 128 characters max"))*1);
 
   if((characterCount >= 8) && (characterCount <= 128)) {
 
-    var upperCaseValue = confirm("Would you like the password to include Uppercase letters?");
+    var upperCaseValue = confirm("Would you like the password to include uppercase letters?");
 
     var lowerCaseValue = confirm("Would you like the password to include lowercase letters?");
 
     var numberValue = confirm("Would you like the password to include numbers?");
 
     var specialValue = confirm("Would you like the password to include special characters?");
+//     if ((upperCaseValue = "false") && 
+//   (lowerCaseValue = "false") &&
+//   (numberValue = "false") && 
+//   (specialValue = "false")  )   {
+// confirm("Please select at least one character set");
+// } 
 
-    if ((upperCasevalue = false) && 
-        (lowerCaseValue = false) &&
-        (number = false) && 
-        (special = false)  )   {
-confirm("Please select at least one character set");
-    } 
-    
   }
   else {
     confirm("Please try again with a number between 8-128");
@@ -50,6 +49,7 @@ confirm("Please select at least one character set");
   console.log(specialValue);
 
 
+// Possible options for the array set list
 // upperCaseValue [true,false]
 // loweCaseValue[true,false]
 // number[true,false]
@@ -57,12 +57,6 @@ confirm("Please select at least one character set");
 
 /*if one of the variables is true, then conct the array with the original list, and keep adding it in*/
 
-// var population = '';
-// if (upperCasevalue) {
-
-//   var population = population.concat(upperCase);
-  
-// } 
 
 let population = [];
 
@@ -87,25 +81,19 @@ console.log(population);
 
 var i =  0;
 
-// var j = [Math.floor(Math.random() * upperCase.length)];
-// var j = population[Math.floor(Math.random() * population.length)];
+
 let final = '';
 
   for ( let i = 0; i < (characterCount); i++){
+  
     var j = population[Math.floor(Math.random() * population.length)];
-    // var j = upperCase[(Math.random() * upperCase.length) | 0];
 
     final += j;
 
     console.log(characterCount);
     console.log(i);
     console.log(final);
-
-
-    
   }
-  password.innerhtml=final;
-
   //This to see the logic of how the passwords are generating
   console.log(characterCount);
   console.log(i);
@@ -125,44 +113,4 @@ const number = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 const symbol = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '~', '\\', '`', '|', '}', '{', '[', ']', ':', ';', '?', '>', '<', ',', '.', '/', '-', '=']
   
-
-
-// function writePassword() {
-
-
-// var charactercount = window.prompt("Length of Password? 8 - Characters Min, 128 characters max");
-
-// if (characterCount = [8-128]) {
-//   var upperCaseValue =  confirm("Would you like the password to include Uppercase letters?")
-
-// var lowerCaseValue = confirm("Would you like the password to include lowercase letters?")
-
-// var number = confirm("Would you like the password to include lowercase letters?") 
-// }
-
-// else {
-//   confirm("Please try again with a number between 8-128");
-// }
-
-// // var upperCaseValue =  confirm("Would you like the password to include Uppercase letters?")
-
-// // var lowerCaseValue = confirm("Would you like the password to include lowercase letters?")
-
-// // var number = confirm("Would you like the password to include lowercase letters?") 
-
-// console.log(characterCount);
-// console.log(upperCaseValue);
-// console.log(lowerCaseValue);
-// console.log(number);
-
-// }
-
-// const keys = {
-//   upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-//   lowerCase: "abcdefghijklmnopqrstuvwxyz",
-//   number: "0123456789",
-//   symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
-// }
-
-
 
