@@ -29,18 +29,22 @@ function generatePassword() {
     var numberValue = confirm("Would you like the password to include numbers?");
 
     var specialValue = confirm("Would you like the password to include special characters?");
-//     if ((upperCaseValue = "false") && 
-//   (lowerCaseValue = "false") &&
-//   (numberValue = "false") && 
-//   (specialValue = "false")  )   {
-// confirm("Please select at least one character set");
-// } 
+
+    if ((upperCaseValue === false) && 
+    (lowerCaseValue === false) &&
+    (numberValue === false) && 
+    (specialValue === false)  )   {
+  confirm("Please select at least one character set");
+  } 
+
 
   }
+
   else {
     confirm("Please try again with a number between 8-128");
   }
   
+
   // This are just the test consoles
   console.log(characterCount);
   console.log(upperCaseValue);
