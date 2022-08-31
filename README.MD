@@ -31,9 +31,7 @@ Please note that due to the passwords being randomly generated, it may be possib
 There are no limitations on repeatable characters
 
 
-![picture showing a screenshot of the webpage with a randomly generated 
-
-password](assets/images/password-generator-screenshot.png
+![picture showing a screenshot of the webpage with a randomly generated password](assets/images/password-generator-screenshot.png)
 
 ## License
 NA
