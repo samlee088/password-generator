@@ -33,5 +33,11 @@ There are no limitations on repeatable characters
 
 ![picture showing a screenshot of the webpage with a randomly generated password](Assets/images/password-generator-screenshot.png)
 
+
+## Credits
+
+NA
+
 ## License
+
 NA
